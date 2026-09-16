@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NewsletterForm from '@/components/feature/NewsletterForm';
-import { addressLine, addressShort, instagramHandle, instagramUrl, phoneDisplay, phoneHref } from '@/mocks/site';
+import { addressLine, addressShort, instagramHandle, instagramUrl, mapsUrl, phoneDisplay, phoneHref } from '@/mocks/site';
 
 const exploreLinks = [
   { key: 'lugar', to: '/o-lugar' },
@@ -79,7 +79,9 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={instagramUrl}
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
                   className="mt-1 inline-flex items-start gap-2 hover:text-background-50 transition-colors"
                 >
                   <i className="ri-map-pin-line mt-0.5" />
