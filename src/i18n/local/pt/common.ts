@@ -7,6 +7,8 @@ export default {
     sobre: 'Sobre',
     visita: 'Visita',
     cta: 'Como chegar',
+    menu: 'Menu',
+    close: 'Fechar',
   },
   brand: {
     name: 'Soli Deo Gloria',
