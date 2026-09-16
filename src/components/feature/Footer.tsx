@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NewsletterForm from '@/components/feature/NewsletterForm';
+import { addressLine, addressShort, instagramHandle, instagramUrl, phoneDisplay, phoneHref } from '@/mocks/site';
 
 const exploreLinks = [
   { key: 'lugar', to: '/o-lugar' },
@@ -25,7 +26,7 @@ export default function Footer() {
               {t('footer.statement')}
             </h2>
             <p className="mt-6 text-sm text-background-100/70 max-w-sm leading-relaxed">
-              Soli Deo Gloria Café — Estrada do Bosque, 240. Serra da Mantiqueira, MG.
+              Soli Deo Gloria Café — {addressLine}.
             </p>
             <div className="mt-8 max-w-md">
               <p className="font-label text-[11px] tracking-[0.18em] uppercase text-background-100/60 mb-3">
@@ -60,24 +61,29 @@ export default function Footer() {
             </p>
             <ul className="mt-6 space-y-3 text-sm text-background-100/80">
               <li>
-                <a href="mailto:oi@solideogloria.cafe" className="hover:text-background-50 transition-colors">
-                  oi@solideogloria.cafe
-                </a>
-              </li>
-              <li>
-                <a href="tel:+5535999990000" className="hover:text-background-50 transition-colors">
-                  (35) 99999-0000
+                <a href={phoneHref} className="inline-flex items-center gap-2 hover:text-background-50 transition-colors">
+                  <i className="ri-phone-line" />
+                  {phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://instagram.com/soli_deo_gloria_cafe"
+                  href={instagramUrl}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   className="inline-flex items-center gap-2 hover:text-background-50 transition-colors"
                 >
                   <i className="ri-instagram-line" />
-                  @soli_deo_gloria_cafe
+                  {instagramHandle}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={instagramUrl}
+                  className="mt-1 inline-flex items-start gap-2 hover:text-background-50 transition-colors"
+                >
+                  <i className="ri-map-pin-line mt-0.5" />
+                  <span className="max-w-[16rem]">{addressLine}</span>
                 </a>
               </li>
             </ul>
@@ -91,7 +97,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-5">
             <a
-              href="https://instagram.com/soli_deo_gloria_cafe"
+              href={instagramUrl}
               target="_blank"
               rel="nofollow noopener noreferrer"
               aria-label="Instagram"
@@ -100,7 +106,7 @@ export default function Footer() {
               <i className="ri-instagram-line text-lg" />
             </a>
             <p className="font-label text-[10px] tracking-[0.18em] uppercase text-background-100/50">
-              Serra da Mantiqueira · MG
+              {addressShort}
             </p>
           </div>
         </div>

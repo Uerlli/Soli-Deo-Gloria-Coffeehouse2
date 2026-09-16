@@ -1,22 +1,18 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { menuCafes, menuComidas, menuDoces } from '@/mocks/menu';
+import { menuCategories, menuPreviewCategoryIds } from '@/mocks/menu';
 import Reveal from '@/components/base/Reveal';
 
-type Category = 'cafes' | 'comidas' | 'doces';
-
-const categories: { key: Category; items: typeof menuCafes }[] = [
-  { key: 'cafes', items: menuCafes },
-  { key: 'comidas', items: menuComidas },
-  { key: 'doces', items: menuDoces },
-];
+const previewCategories = menuPreviewCategoryIds
+  .map((id) => menuCategories.find((cat) => cat.id === id))
+  .filter((cat): cat is (typeof menuCategories)[number] => Boolean(cat));
 
 export default function MenuPreviewSection() {
   const { t } = useTranslation();
-  const [active, setActive] = useState<Category>('cafes');
+  const [activeId, setActiveId] = useState<string>(previewCategories[0]?.id ?? '');
 
-  const activeItems = categories.find((c) => c.key === active)?.items ?? [];
+  const activeItems = previewCategories.find((cat) => cat.id === activeId)?.items.slice(0, 6) ?? [];
 
   return (
     <section className="w-full bg-background-50 py-24 md:py-32">
@@ -43,18 +39,18 @@ export default function MenuPreviewSection() {
           <div className="lg:col-span-4">
             <Reveal>
               <div className="inline-flex flex-wrap gap-1 rounded-full border border-background-300 bg-background-100 p-1">
-                {categories.map((cat) => (
+                {previewCategories.map((cat) => (
                   <button
-                    key={cat.key}
+                    key={cat.id}
                     type="button"
-                    onClick={() => setActive(cat.key)}
+                    onClick={() => setActiveId(cat.id)}
                     className={`rounded-full px-5 py-2.5 font-label text-[11px] tracking-[0.16em] uppercase whitespace-nowrap transition-colors ${
-                      active === cat.key
+                      activeId === cat.id
                         ? 'bg-primary-500 text-background-50'
                         : 'text-foreground-600 hover:text-foreground-900'
                     }`}
                   >
-                    {t(`menu.categories.${cat.key}`)}
+                    {cat.label}
                   </button>
                 ))}
               </div>
@@ -83,7 +79,7 @@ export default function MenuPreviewSection() {
                 >
                   <div className="min-w-0">
                     <h3 className="font-heading text-xl md:text-2xl text-foreground-900">{item.name}</h3>
-                    <p className="mt-1 text-sm text-foreground-500">{item.desc}</p>
+                    {item.desc ? <p className="mt-1 text-sm text-foreground-500">{item.desc}</p> : null}
                   </div>
                   <span className="font-label text-sm text-primary-500 whitespace-nowrap">{item.price}</span>
                 </div>

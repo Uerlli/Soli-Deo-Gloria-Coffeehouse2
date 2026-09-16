@@ -41,12 +41,12 @@ export default function HeroSection() {
         </Reveal>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-10 px-4 md:px-8 lg:px-12 pb-8 flex items-end justify-between">
+      <div className="absolute bottom-0 left-0 right-0 z-10 px-4 md:px-8 lg:px-12 pb-8 grid grid-cols-3 items-end">
         <span className="font-label text-[10px] tracking-[0.2em] uppercase text-background-100/70">
           {t('hero.since')}
         </span>
 
-        <div className="flex flex-col items-center gap-3">
+        <div className="flex flex-col items-center gap-3 justify-self-center">
           <span className="font-label text-[10px] tracking-[0.2em] uppercase text-background-100/70">
             {t('hero.scroll')}
           </span>
@@ -55,9 +55,7 @@ export default function HeroSection() {
           </span>
         </div>
 
-        <span className="font-label text-[10px] tracking-[0.2em] uppercase text-background-100/70 hidden sm:block">
-          Ter–Dom · 8h às 18h
-        </span>
+        <span />
       </div>
     </section>
   );

@@ -45,7 +45,7 @@ export default function CoffeeRitualSection() {
           <div className="w-full aspect-[16/9] md:aspect-[21/8] overflow-hidden rounded-lg bg-primary-900">
             <img
               src={coffeeImages.brew}
-              alt="Preparo de café coado com água quente e vapor"
+              alt="Espresso sendo extraído na máquina, fio de café caindo no copo"
               className="w-full h-full object-cover object-top"
             />
           </div>

@@ -59,7 +59,7 @@ export default function PlaceSection() {
                 <div className="w-full aspect-[3/4] overflow-hidden rounded-lg bg-background-200">
                   <img
                     src={placeImages.exterior}
-                    alt="Arquitetura de madeira e vidro do café entre a mata nativa"
+                    alt="Casa do Soli Deo Gloria entre as árvores com pessoas reunidas no jardim"
                     className="w-full h-full object-cover object-top transition-transform duration-[1200ms] hover:scale-105"
                   />
                 </div>

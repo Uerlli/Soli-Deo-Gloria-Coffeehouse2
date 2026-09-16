@@ -35,7 +35,7 @@ export default function ExperienceSection() {
                 <img
                   src={experienceImages[0].src}
                   alt={experienceImages[0].alt}
-                  className="w-full h-full object-cover object-top transition-transform duration-[1200ms] hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-[1200ms] hover:scale-105"
                 />
               </div>
             </Reveal>
@@ -44,7 +44,7 @@ export default function ExperienceSection() {
                 <img
                   src={experienceImages[1].src}
                   alt={experienceImages[1].alt}
-                  className="w-full h-full object-cover object-top transition-transform duration-[1200ms] hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-[1200ms] hover:scale-105"
                 />
               </div>
             </Reveal>

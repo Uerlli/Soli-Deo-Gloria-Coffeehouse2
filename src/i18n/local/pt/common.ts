@@ -52,7 +52,10 @@ export default {
     label: '03 — Cardápio',
     title: 'Do simples do dia ao detalhe que fica.',
     body: 'Um cardápio curto, feito na casa, mudando com a estação. Nada de excesso — só o que vale a pena ser servido bem.',
+    intro: 'Tudo o que é servido na casa, organizado por categoria — do café coado às tortas do dia. O que muda com a estação, a gente avisa por aqui.',
     link: 'Ver cardápio completo',
+    noteLabel: 'Sobre o cardápio',
+    note: 'Preços e itens podem variar conforme a estação e a disponibilidade dos grãos e dos ingredientes. Pergunte à equipe pelas novidades do dia.',
     categories: {
       cafes: 'Cafés',
       comidas: 'Comidas',
@@ -66,8 +69,8 @@ export default {
   },
   experience: {
     label: '04 — Experiência',
-    title: 'O café como ponto de encontro.',
-    body: 'O SDG é também o lugar onde coisas acontecem: encontros pequenos, conversas que se estendem, celebrações discretas. Sem palco, sem ruído — só a ocasião e quem está perto.',
+    title: 'O Soli Deo Gloria como ponto de encontro.',
+    body: 'O SDG é um lugar onde coisas acontecem: encontros pequenos e conversas que se estendem até encontros de igrejas, acampamentos, reserva de aniversários, casamentos e outros eventos.',
     link: 'Sobre a experiência',
   },
   visit: {

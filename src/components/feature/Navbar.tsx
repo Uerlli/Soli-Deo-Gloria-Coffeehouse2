@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useScrolled from '@/hooks/useScrolled';
 import { brandMark } from '@/mocks/media';
+import { mapsUrl } from '@/mocks/site';
 
 const navLinks = [
   { key: 'lugar', to: '/o-lugar' },
@@ -69,8 +70,10 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              to="/visita"
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
               className={`hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-label text-[11px] tracking-[0.16em] uppercase whitespace-nowrap transition-colors ${
                 solid
                   ? 'bg-primary-500 text-background-50 hover:bg-primary-600'
@@ -79,7 +82,7 @@ export default function Navbar() {
             >
               {t('nav.cta')}
               <i className="ri-arrow-right-line text-sm" />
-            </Link>
+            </a>
 
             <button
               type="button"
@@ -112,13 +115,15 @@ export default function Navbar() {
                 </span>
               </Link>
             ))}
-            <Link
-              to="/visita"
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
               className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary-500 text-background-50 px-6 py-4 font-label text-xs tracking-[0.18em] uppercase"
             >
               {t('nav.cta')}
               <i className="ri-arrow-right-line" />
-            </Link>
+            </a>
           </nav>
         </div>
       )}
