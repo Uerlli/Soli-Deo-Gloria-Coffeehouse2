@@ -16,7 +16,7 @@ export default {
     tagline: 'Café, lugar e presença',
   },
   hero: {
-    eyebrow: 'Projeto Soli Deo Gloria · Serra da Mantiqueira',
+    eyebrow: 'Projeto Soli Deo Gloria · Recife',
     line1: 'Soli Deo',
     line2: 'Gloria',
     accent: 'Café',
@@ -78,7 +78,7 @@ export default {
   visit: {
     label: '05 — Visita',
     title: 'A parte que nenhum site substitui.',
-    body: 'Endereço, horários e tudo o que você precisa saber antes de subir a serra. Aconselhamos vir sem pressa.',
+    body: 'Endereço, horários e tudo o que você precisa saber antes de nos visitar. Aconselhamos vir sem pressa.',
     cta: 'Planejar minha visita',
     addressTitle: 'Endereço',
     address: 'Alameda Pau Ferro, 835 - Guabiraba, Recife - PE, 54789-770',
